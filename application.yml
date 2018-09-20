@@ -1,12 +1,18 @@
-server: 
-  port: 3344 
+ï»¿spring:
+  profiles: 
+    active:
+     -  dev
+--- 
   
 spring:
+  profiles: dev    #å¼€å‘ç¯å¢ƒ
   application:
-    name:  microservicecloud-config
-  cloud:
-    config:
-      server:
-        git:
-          uri: git@github.com:zzyybs/microservicecloud-config.git #GitHubÉÏÃæµÄgit²Ö¿âÃû×Ö
- 
+    name:  microservicecloud-config-atguigu-dev
+
+ --- 
+  
+spring:
+  profiles: test   #æµ‹è¯•ç¯å¢ƒ
+  application:
+    name:  microservicecloud-config-atguigu-test
+#è¯·ä¿å­˜ä¸ºUTF-8æ ¼å¼
